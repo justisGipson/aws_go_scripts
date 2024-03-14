@@ -1,4 +1,3 @@
-// get_iam_users.go ---go
 package main
 
 import (

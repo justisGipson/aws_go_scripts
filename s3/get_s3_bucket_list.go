@@ -1,4 +1,4 @@
-package s3buckets
+package main
 
 import (
 	"context"

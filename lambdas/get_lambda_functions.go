@@ -1,4 +1,3 @@
-// get_lambda_functions.go ---go
 package main
 
 import (

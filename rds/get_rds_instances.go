@@ -1,4 +1,3 @@
-// get_rds_instances.go ---go
 package main
 
 import (

@@ -1,4 +1,4 @@
-package ec2metadata
+package main
 
 import (
 	"context"
