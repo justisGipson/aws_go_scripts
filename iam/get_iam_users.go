@@ -19,7 +19,9 @@ func main() {
 	}
 
 	// Create an IAM client
-	svc := iam.New(cfg)
+	svc := iam.New(iam.Options{
+		Region: cfg.Region,
+	})
 
 	// List IAM users
 	result, err := svc.ListUsers(context.TODO(), &iam.ListUsersInput{})

@@ -19,7 +19,9 @@ func main() {
 	}
 
 	// Create an RDS client
-	svc := rds.New(cfg)
+	svc := rds.New(rds.Options{
+		Region: cfg.Region,
+	})
 
 	// Describe RDS instances
 	result, err := svc.DescribeDBInstances(context.TODO(), &rds.DescribeDBInstancesInput{})
