@@ -18,9 +18,7 @@ func main() {
 	}
 
 	// Create a Lambda client
-	svc := lambda.New(lambda.Options{
-		Region: cfg.Region,
-	})
+	svc := lambda.NewFromConfig(cfg)
 
 	// List Lambda functions
 	result, err := svc.ListFunctions(context.TODO(), &lambda.ListFunctionsInput{})

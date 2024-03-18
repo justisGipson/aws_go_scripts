@@ -18,10 +18,7 @@ func main() {
 	}
 
 	// Create an EC2 client
-	svc := ec2.New(ec2.Options{
-		Region: cfg.Region,
-	})
-
+	svc := ec2.NewFromConfig(cfg)
 	// Describe EC2 instances
 	result, err := svc.DescribeInstances(context.TODO(), &ec2.DescribeInstancesInput{})
 	if err != nil {

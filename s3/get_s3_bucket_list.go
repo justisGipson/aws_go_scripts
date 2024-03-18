@@ -18,9 +18,7 @@ func main() {
 	}
 
 	// Create an S3 client
-	svc := s3.New(s3.Options{
-		Region: cfg.Region,
-	})
+	svc := s3.NewFromConfig(cfg)
 
 	// List S3 buckets
 	result, err := svc.ListBuckets(context.TODO(), &s3.ListBucketsInput{})
